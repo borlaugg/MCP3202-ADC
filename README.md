@@ -25,7 +25,7 @@ The two channel ports CH0 and CH1 will be connected to the pressure sensor while
 </p>
 The ADC has two configurations for its input either single ended or differential.The pressure sensor being used has a differential output. This requires the first two bit that is to be transferred as 0 which should occur soon as the chip select line goes LOW (default HIGH). In the other case the first bit should be 1 and the second either 1 use CH1 or 0 to use CH0. Configuration of CH0 as +ve and CH1 as -ve polarity while taking differential input reuires the second bit to be 0 while 1 configures it to the reverse polarity. 
 Next to set the data transfer in MSB format the third bit should be 1, while 0 configures it to transfer it in LSB format.
-The Arduino command RxData = **SPI.transfer(0x2f)** configures it to differential mode, with MSB format. The variable RxData will store the received data in MSB format. Also SPI will be operated in mode 0 where it reads on rising clock edges and transmits on falling.
+The Arduino command **RxData** = **SPI.transfer(0x2f)** configures it to differential mode, with MSB format. The variable RxData will store the received data in MSB format. Also SPI will be operated in mode 0 where it reads on rising clock edges and transmits on falling.
 
 After this we send reading stored in RxData is sent to the SBC using the command **Serial.print(RxData)**.
 
