@@ -18,7 +18,7 @@ The two channel ports CH0 and CH1 will be connected to the pressure sensor while
 ## Receiving the data through SPI
 <p align="center">
   <img 
-    width="600"
+    width="500"
     height="300"
     src="https://github.com/borlaugg/MCP3202-ADC/blob/46203b452ba05923a22b74a7c747723d60139d57/docs/Bitconfig.png"
   >
